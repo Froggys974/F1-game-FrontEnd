@@ -1,0 +1,98 @@
+main {
+    display: flex;
+    align-items: center;
+    background-color: rgb(220, 204, 204);
+    width: 100vw;
+    height: 92vh;
+    flex-direction: column;
+}
+
+.lightRace {
+    display: grid;
+    gap: 0px;
+    width: 42%;
+    /* Ajuster la largeur selon vos besoins */
+    height: 50%;
+    min-width: 400px;
+    /* Taille minimale du grand rectangle */
+    max-width: 600px;
+    /* Taille maximale du grand rectangle */
+    min-height: 340px;
+    position: relative;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.light-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    background: black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    /* Ajouter de l'espace entre les cercles */
+    z-index: 1;
+}
+
+.trait-Noir {
+    position: absolute;
+    width: 90%;
+    height: 5%;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+    /* Définir le z-index sur 0 ou une valeur inférieure */
+
+}
+
+.light {
+    width: 76%;
+    height: 22%;
+    background-color: #222;
+    border-radius: 50%;
+}
+
+.on {
+    background-color: red;
+}
+.go {
+    background-color: green;
+}
+
+.temps {
+    font-size: 11vw;
+
+    line-height: 1;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+
+}
+
+.transition {
+    animation: explode 0.5s forwards;
+}
+
+@keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+.bestSection {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.4;
+    padding-top: 2rem;
+}
